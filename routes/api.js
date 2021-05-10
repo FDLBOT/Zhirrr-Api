@@ -113,7 +113,7 @@ loghandler = {
         status: false,
         creator: `FDL`,
         code: 406,
-        message: 'CHAT OWNER UNTUK MENDAPATKAN APIKEY!'
+        message: 'APIKEY INVALID!'
     },
     invalidlink: {
         status: false,
@@ -153,7 +153,7 @@ var len = 15
             randomlagi += arr[Math.floor(Math.random() * arr.length)];
         }
 
-        var randomTextNumber = random+randomlagi+'---------FDL'+'FADHIL--GANZ';
+        var randomTextNumber = random+randomlagi+'FDL'+'FDL';
         
  
  async function cekApiKey(api) {
