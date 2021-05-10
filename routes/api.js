@@ -38,102 +38,102 @@ var cookie = "HSID=A7EDzLn3kae2B1Njb;SSID=AheuwUjMojTWvA5GN;APISID=cgfXh13rQbb4z
 loghandler = {
     notparam: {
         status: false,
-        creator: `${creator}`,
+        creator: `FDL`,
         code: 406,
         message: 'masukan parameter apikey',
         getApikey: 'CHAT OWNER UNTUK MENDAPATKAN APIKEY!'
     },
     notkey: {
         status: false,
-        creator: `${creator}`,
+        creator: `FDL`,
         code: 406,
         message: 'masukan parameter key'
     },
     noturl: {
         status: false,
-        creator: `${creator}`,
+        creator: `FDL`,
         code: 406,
         message: 'masukan parameter url'
     },
     notkata: {
         status: false,
-        creator: `${creator}`,
+        creator: `FDL`,
         code: 406,
         message: 'masukan parameter kata'
     },
     nottext: {
         status: false,
-        creator: `${creator}`,
+        creator: `FDL`,
         code: 406,
         message: 'masukan parameter text'
     },
     nottext2: {
         status: false,
-        creator: `${creator}`,
+        creator: `FDL`,
         code: 406,
         message: 'masukan parameter text2'
     },
     notnabi: {
         status: false,
-        creator: `${creator}`,
+        creator: `FDL`,
         code: 406,
         message: 'masukan parameter nabi'
     },
     nottext3: {
         status: false,
-        creator: `${creator}`,
+        creator: `FDL`,
         code: 406,
         message: 'masukan parameter text3'
     },
     nottheme: {
         status: false,
-        creator: `${creator}`,
+        creator: `FDL`,
         code: 406,
         message: 'masukan parameter theme'
     },
     notusername: {
         status: false,
-        creator: `${creator}`,
+        creator: `FDL`,
         code: 406,
         message: 'masukan parameter username'
     },
     notvalue: {
         status: false,
-        creator: `${creator}`,
+        creator: `FDL`,
         code: 406,
         message: 'masukan parameter value'
     },
     notheme: {
       status: false,
-        creator: `${creator}`,
+        creator: `FDL`,
         code: 406,
         message: 'theme tidak tersedia silahkan masukkan texmaker/list atau baca documentasi'
      },
     invalidKey: {
         status: false,
-        creator: `${creator}`,
+        creator: `FDL`,
         code: 406,
         message: 'CHAT OWNER UNTUK MENDAPATKAN APIKEY!'
     },
     invalidlink: {
         status: false,
-        creator: `${creator}`,
+        creator: `FDL`,
         message: 'error, mungkin link anda tidak valid.'
     },
     invalidkata: {
         status: false,
-        creator: `${creator}`,
+        creator: `FDL`,
         message: 'error, mungkin kata tidak ada dalam api.'
     },
     notAddApiKey: {
         status: false,
-        creator: `${creator}`,
+        creator: `FDL`,
         code: 406,
         message: 'masukan parameter status, apikeyInput, email, nomorhp, name, age, country, exp'
     },
     error: {
         status: false,
-        creator: `${creator}`,
+        creator: `FDL`,
         message: 'mungkin sedang dilakukan perbaikan'
     }
 }
@@ -170,7 +170,7 @@ router.get('/find', async (req, res, next) => {
             .then(result => {
                 res.json({
                     status: true,
-                    creator: `${creator}`,
+                    creator: `FDL`,
                     result
                 })
         })
@@ -201,7 +201,7 @@ router.get('/cekapikey', async (req, res, next) => {
         exp:a.exp,
       },
     },
-    message: `jangan lupa follow ${creator}`
+    message: `Folow Ig @fdl_ganz`
   })
 } else {
   json = JSON.stringify({
@@ -240,7 +240,7 @@ router.get('/addapikey', (req, res, next) => {
         .then(() => {
               res.json({
                   status: true,
-                  creator: `${creator}`,
+                  creator: `FDL`,
                   result: 'berhasil menambah data, status : ' + status + ', apikey : ' + apikeyInput + ', email : ' + email + ', nomor_hp : ' + nomorhp + ', name :  ' + name + ', age : ' + age + ', country : ' + country + ', exp : ' + exp
               })
         })
@@ -279,7 +279,7 @@ router.get('/remove', (req, res, next) => {
         .then(() => {
              res.json({
                   status: true,
-                  creator: `${creator}`,
+                  creator: `FDL`,
                   result: 'berhasil menghapus data, status : ' + status + ', apikey : ' + apikeyInput + ', email : ' + email + ', nomor_hp : ' + nomorhp + ', name :  ' + name + ', age : ' + age + ', country : ' + country + ', exp : ' + exp
               })
         })
@@ -303,7 +303,7 @@ router.get('/tiktod', async (req, res, next) => {
              console.log(vid)
              res.json({
                  status: true,
-                 creator: `${creator}`,
+                 creator: `FDL`,
                  videoNoWm: vid
              })
          })
@@ -325,14 +325,14 @@ router.get('/tiktod/stalk', async (req, res, next) => {
         .then(user => {
             res.json({
                 status : true,
-                creator : `${creator}`,
+                creator : `FDL`,
                 result : user
             })
         })
         .catch(e => {
              res.json({
                  status : false,
-                 creator : `${creator}`,
+                 creator : `FDL`,
                  message : "error, mungkin username anda tidak valid"
              })
          })
@@ -349,7 +349,7 @@ router.get('/randomquote', async (req, res, next) => {
         .then(data => {
         var result = data;
              res.json({
-                 creator : `${creator}`,
+                 creator : `FDL`,
                  result
              })
          })
@@ -365,7 +365,7 @@ router.get('/infonpm', async (req, res, next) => {
             
   if(!apikeyInput) return res.json(loghandler.notparam)
   if(apikeyInput != 'BukanMastah') return res.json(loghandler.invalidKey)
-    if (!query) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter query"})
+    if (!query) return res.json({ status : false, creator : `FDL`, message : "masukan parameter query"})
 
        fetch(encodeURI(`https://registry.npmjs.org/${query}`))
         .then(response => response.json())
@@ -373,9 +373,9 @@ router.get('/infonpm', async (req, res, next) => {
         var result = data;
              res.json({
                  status : true,
-                 creator : `${creator}`,
+                 creator : `FDL`,
                  result,
-                 message : `jangan lupa follow ${creator}`
+                 message : `Folow Ig @fdl_ganz`
              })
          })
          .catch(e => {
@@ -415,7 +415,7 @@ Axios.get('https://jadwalnonton.com/now-playing')
           })
      }
      res.send({
-     creator:  `${creator}`,
+     creator:  `FDL`,
      status: true,
      result: result
      })
@@ -434,11 +434,11 @@ router.get('/short/tiny', async (req, res, next) => {
          try {
              res.json({
                  status : true,
-                 creator : `${creator}`,
+                 creator : `FDL`,
                  result : {
                      link : `${body}`,
                  },
-                 message : `jangan lupa follow ${creator}`
+                 message : `Folow Ig @fdl_ganz`
              })
          } catch (e) {
              console.log('Error :', color(e,'red'))
@@ -460,7 +460,7 @@ router.get('/base', async (req, res, next) => {
         .then(result => {
           res.json({
             status:true,
-            creator: `${creator}`,
+            creator: `FDL`,
             result
           })
         })
@@ -469,7 +469,7 @@ router.get('/base', async (req, res, next) => {
         .then(result => {
           res.json({
             status: true,
-            creator: `${creator}`,
+            creator: `FDL`,
             result
           })
         })
@@ -478,7 +478,7 @@ router.get('/base', async (req, res, next) => {
         .then(result => {
           res.json({
             status:true,
-            creator: `${creator}`,
+            creator: `FDL`,
             result
           })
         })
@@ -487,14 +487,14 @@ router.get('/base', async (req, res, next) => {
         .then(result => {
           res.json({
             status:true,
-            creator: `${creator}`,
+            creator: `FDL`,
             result
           })
         })
       } else if(!(encode || decode)){
         res.json({
           status:false,
-          creator: `${creator}`,
+          creator: `FDL`,
           message: "tambahkan parameter encode/decode"
         })
       } else {
@@ -517,8 +517,8 @@ router.get('/nulis', async (req, res, next) => {
                                         delete_url = data.data.delete_url;
                                         res.json({
                                             status : true,
-                                            creator : `${creator}`,
-                                            message : `jangan lupa follow ${creator}`,
+                                            creator : `FDL`,
+                                            message : `Folow Ig @fdl_ganz`,
                                             result:{
                                                 url:urlnya,
                                                 delete_url: delete_url,
@@ -567,8 +567,8 @@ router.get('/textmaker', async (req, res, next) => {
                                         delete_url = data.data.delete_url;
                                         res.json({
                                             status : true,
-                                            creator : `${creator}`,
-                                            message : `jangan lupa follow ${creator}`,
+                                            creator : `FDL`,
+                                            message : `Folow Ig @fdl_ganz`,
                                             result:{
                                                 url:urlnya,
                                                 delete_url: delete_url,
@@ -605,8 +605,8 @@ router.get('/textmaker', async (req, res, next) => {
                                         delete_url = data.data.delete_url;
                                         res.json({
                                             status : true,
-                                            creator : `${creator}`,
-                                            message : `jangan lupa follow ${creator}`,
+                                            creator : `FDL`,
+                                            message : `Folow Ig @fdl_ganz`,
                                             result:{
                                                 url:urlnya,
                                                 delete_url: delete_url,
@@ -657,8 +657,8 @@ router.get('/textmaker/game', async (req, res, next) => {
                                         delete_url = data.data.delete_url;
                                         res.json({
                                             status : true,
-                                            creator : `${creator}`,
-                                            message : `jangan lupa follow ${creator}`,
+                                            creator : `FDL`,
+                                            message : `Folow Ig @fdl_ganz`,
                                             result:{
                                                 url:urlnya,
                                                 delete_url: delete_url,
@@ -694,8 +694,8 @@ router.get('/textmaker/game', async (req, res, next) => {
                                         delete_url = data.data.delete_url;
                                         res.json({
                                             status : true,
-                                            creator : `${creator}`,
-                                            message : `jangan lupa follow ${creator}`,
+                                            creator : `FDL`,
+                                            message : `Folow Ig @fdl_ganz`,
                                             result:{
                                                 url:urlnya,
                                                 delete_url: delete_url,
@@ -745,8 +745,8 @@ router.get('/textmaker/senja', async (req, res, next) => {
                                         delete_url = data.data.delete_url;
                                         res.json({
                                             status : true,
-                                            creator : `${creator}`,
-                                            message : `jangan lupa follow ${creator}`,
+                                            creator : `FDL`,
+                                            message : `Folow Ig @fdl_ganz`,
                                             result:{
                                                 url:urlnya,
                                                 delete_url: delete_url,
@@ -781,8 +781,8 @@ router.get('/textmaker/senja', async (req, res, next) => {
                                         delete_url = data.data.delete_url;
                                         res.json({
                                             status : true,
-                                            creator : `${creator}`,
-                                            message : `jangan lupa follow ${creator}`,
+                                            creator : `FDL`,
+                                            message : `Folow Ig @fdl_ganz`,
                                             result:{
                                                 url:urlnya,
                                                 delete_url: delete_url,
@@ -842,8 +842,8 @@ router.get('/hadits', async (req, res, next) => {
             
   if(!apikeyInput) return res.json(loghandler.notparam)
   if(apikeyInput != 'BukanMastah') return res.json(loghandler.invalidKey)
-    if (!kitab) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter kitab"})
-    if (!nomor) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter nomor"})
+    if (!kitab) return res.json({ status : false, creator : `FDL`, message : "masukan parameter kitab"})
+    if (!nomor) return res.json({ status : false, creator : `FDL`, message : "masukan parameter nomor"})
 
        fetch(encodeURI(`https://hadits-api-zhirrr.vercel.app/books/${kitab}/${nomor}`))
         .then(response => response.json())
@@ -866,8 +866,8 @@ router.get('/quran', async (req, res, next) => {
             
   if(!apikeyInput) return res.json(loghandler.notparam)
   if(apikeyInput != 'BukanMastah') return res.json(loghandler.invalidKey)
-    if (!surah) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter surah"})
-    if (!ayat) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter ayat"})
+    if (!surah) return res.json({ status : false, creator : `FDL`, message : "masukan parameter surah"})
+    if (!ayat) return res.json({ status : false, creator : `FDL`, message : "masukan parameter ayat"})
 
        fetch(encodeURI(`https://alquran-apiii.vercel.app/surah/${surah}/${ayat}`))
         .then(response => response.json())
@@ -889,7 +889,7 @@ router.get('/fbdown', async (req, res, next) => {
             
   if(!apikeyInput) return res.json(loghandler.notparam)
   if(apikeyInput != 'BukanMastah') return res.json(loghandler.invalidKey)
-    if (!url) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter url"})
+    if (!url) return res.json({ status : false, creator : `FDL`, message : "masukan parameter url"})
 
        fetch(encodeURI(`https://fb-api-zhirrr.vercel.app/?url=${url}`))
         .then(response => response.json())
@@ -939,8 +939,8 @@ router.get('/textmaker/metallic', async (req, res, next) => {
                                         delete_url = data.data.delete_url;
                                         res.json({
                                             status : true,
-                                            creator : `${creator}`,
-                                            message : `jangan lupa follow ${creator}`,
+                                            creator : `FDL`,
+                                            message : `Folow Ig @fdl_ganz`,
                                             result:{
                                                 url:urlnya,
                                                 delete_url: delete_url,
@@ -975,8 +975,8 @@ router.get('/textmaker/metallic', async (req, res, next) => {
                                         delete_url = data.data.delete_url;
                                         res.json({
                                             status : true,
-                                            creator : `${creator}`,
-                                            message : `jangan lupa follow ${creator}`,
+                                            creator : `FDL`,
+                                            message : `Folow Ig @fdl_ganz`,
                                             result:{
                                                 url:urlnya,
                                                 delete_url: delete_url,
@@ -1026,8 +1026,8 @@ router.get('/textmaker/alam', async (req, res, next) => {
                                         delete_url = data.data.delete_url;
                                         res.json({
                                             status : true,
-                                            creator : `${creator}`,
-                                            message : `jangan lupa follow ${creator}`,
+                                            creator : `FDL`,
+                                            message : `Folow Ig @fdl_ganz`,
                                             result:{
                                                 url:urlnya,
                                                 delete_url: delete_url,
@@ -1062,8 +1062,8 @@ router.get('/textmaker/alam', async (req, res, next) => {
                                         delete_url = data.data.delete_url;
                                         res.json({
                                             status : true,
-                                            creator : `${creator}`,
-                                            message : `jangan lupa follow ${creator}`,
+                                            creator : `FDL`,
+                                            message : `Folow Ig @fdl_ganz`,
                                             result:{
                                                 url:urlnya,
                                                 delete_url: delete_url,
@@ -1445,7 +1445,7 @@ router.get('/wikipedia', async (req, res, next) => {
             
   if(!apikeyInput) return res.json(loghandler.notparam)
   if(apikeyInput != 'BukanMastah') return res.json(loghandler.invalidKey)
-        if(!search) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter search"})
+        if(!search) return res.json({ status : false, creator : `FDL`, message : "masukan parameter search"})
 
        fetch(encodeURI(`https://docs-api-zahirrr.herokuapp.com/api/wiki?keyword=${search}`))
         .then(response => response.json())
@@ -1486,7 +1486,7 @@ router.get('/drakorasia', async (req, res, next) => {
             
   if(!apikeyInput) return res.json(loghandler.notparam)
   if(apikeyInput != 'BukanMastah') return res.json(loghandler.invalidKey)
-        if(!search) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter search"})
+        if(!search) return res.json({ status : false, creator : `FDL`, message : "masukan parameter search"})
 
        fetch(encodeURI(`http://docs-api-zahirrr.herokuapp.com/api/drakorasia?search=${search}`))
         .then(response => response.json())
@@ -1508,7 +1508,7 @@ router.get('/jadwalshalat', async (req, res, next) => {
             
   if(!apikeyInput) return res.json(loghandler.notparam)
   if(apikeyInput != 'BukanMastah') return res.json(loghandler.invalidKey)
-        if(!kota) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter kota"})
+        if(!kota) return res.json({ status : false, creator : `FDL`, message : "masukan parameter kota"})
 
        fetch(encodeURI(`https://raw.githubusercontent.com/Zhirrr/Zhirrr-Database/main/adzan/${kota}/2021/03.json`))
         .then(response => response.json())
@@ -1530,7 +1530,7 @@ router.get('/fakedata', async (req, res, next) => {
             
   if(!apikeyInput) return res.json(loghandler.notparam)
   if(apikeyInput != 'BukanMastah') return res.json(loghandler.invalidKey)
-        if(!country) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter country"})
+        if(!country) return res.json({ status : false, creator : `FDL`, message : "masukan parameter country"})
 
        fetch(encodeURI(`https://fakename-api-zhirrr.vercel.app/api/fakename?country=${country}`))
         .then(response => response.json())
@@ -1552,7 +1552,7 @@ router.get('/hilih', async (req, res, next) => {
             
   if(!apikeyInput) return res.json(loghandler.notparam)
   if(apikeyInput != 'BukanMastah') return res.json(loghandler.invalidKey)
-        if(!kata) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter kata"})
+        if(!kata) return res.json({ status : false, creator : `FDL`, message : "masukan parameter kata"})
 
        fetch(encodeURI(`https://hilih-api-zhirrr.vercel.app/api/hilih?kata=${kata}`))
         .then(response => response.json())
@@ -1574,7 +1574,7 @@ router.get('/liriklagu', async (req, res, next) => {
             
   if(!apikeyInput) return res.json(loghandler.notparam)
   if(apikeyInput != 'BukanMastah') return res.json(loghandler.invalidKey)
-        if(!lagu) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter kata"})
+        if(!lagu) return res.json({ status : false, creator : `FDL`, message : "masukan parameter kata"})
 
        fetch(encodeURI(`https://python-api-zhirrr.herokuapp.com/api/lirik?search=${lagu}`))
         .then(response => response.json())
@@ -1596,7 +1596,7 @@ router.get('/chordlagu', async (req, res, next) => {
             
   if(!apikeyInput) return res.json(loghandler.notparam)
   if(apikeyInput != 'BukanMastah') return res.json(loghandler.invalidKey)
-        if(!lagu) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter kata"})
+        if(!lagu) return res.json({ status : false, creator : `FDL`, message : "masukan parameter kata"})
 
        fetch(encodeURI(`https://python-api-zhirrr.herokuapp.com/api/chord?q=${lagu}`))
         .then(response => response.json())
@@ -1638,7 +1638,7 @@ router.get('/kbbi', async (req, res, next) => {
             
   if(!apikeyInput) return res.json(loghandler.notparam)
   if(apikeyInput != 'BukanMastah') return res.json(loghandler.invalidKey)
-        if(!kata) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter kata"})
+        if(!kata) return res.json({ status : false, creator : `FDL`, message : "masukan parameter kata"})
 
        fetch(encodeURI(`https://kbbi-api-zhirrr.vercel.app/api/kbbi?text=${kata}`))
         .then(response => response.json())
@@ -1700,7 +1700,7 @@ router.get('/kodepos', async (req, res, next) => {
             
   if(!apikeyInput) return res.json(loghandler.notparam)
   if(apikeyInput != 'BukanMastah') return res.json(loghandler.invalidKey)
-  if(!kota) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter kota"})
+  if(!kota) return res.json({ status : false, creator : `FDL`, message : "masukan parameter kota"})
 
        fetch(encodeURI(`https://kodepos-api-zhirrr.vercel.app/?q=${kota}`))
         .then(response => response.json())
@@ -1722,7 +1722,7 @@ router.get('/cuaca', async (req, res, next) => {
             
   if(!apikeyInput) return res.json(loghandler.notparam)
   if(apikeyInput != 'BukanMastah') return res.json(loghandler.invalidKey)
-  if(!kabupaten) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter kabupaten"})
+  if(!kabupaten) return res.json({ status : false, creator : `FDL`, message : "masukan parameter kabupaten"})
        fetch(encodeURI(`https://docs-api-zahirrr.herokuapp.com/api/cuaca?kabupaten=${kabupaten}`))
         .then(response => response.json())
         .then(data => {
@@ -1783,7 +1783,7 @@ router.get('/translate', async (req, res, next) => {
             
   if(!apikeyInput) return res.json(loghandler.notparam)
   if(apikeyInput != 'BukanMastah') return res.json(loghandler.invalidKey)
-  if(!kata) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter kata"})
+  if(!kata) return res.json({ status : false, creator : `FDL`, message : "masukan parameter kata"})
        fetch(encodeURI(`https://docs-api-zahirrr.herokuapp.com/api/translate?text=${kata}`))
         .then(response => response.json())
         .then(data => {
@@ -1804,7 +1804,7 @@ router.get('/anime/kusonime', async (req, res, next) => {
             
   if(!apikeyInput) return res.json(loghandler.notparam)
   if(apikeyInput != 'BukanMastah') return res.json(loghandler.invalidKey)
-  if(!search) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter search"})
+  if(!search) return res.json({ status : false, creator : `FDL`, message : "masukan parameter search"})
        fetch(encodeURI(`https://docs-api-zahirrr.herokuapp.com/api/kusonime?search=${search}`))
         .then(response => response.json())
         .then(data => {
@@ -1845,7 +1845,7 @@ router.get('/manga', async (req, res, next) => {
             
   if(!apikeyInput) return res.json(loghandler.notparam)
   if(apikeyInput != 'BukanMastah') return res.json(loghandler.invalidKey)
-  if(!search) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter search"})
+  if(!search) return res.json({ status : false, creator : `FDL`, message : "masukan parameter search"})
        fetch(encodeURI(`https://docs-api-zahirrr.herokuapp.com/api/manga?keyword=${search}`))
         .then(response => response.json())
         .then(data => {
