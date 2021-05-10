@@ -453,7 +453,7 @@ router.get('/base', async (req, res, next) => {
     decode = req.query.decode,
     apikeyInput = req.query.apikey;
     if (!apikeyInput) return res.json(loghandler.notparam)
-    if (apikeyInput != 'zahirgans') return res.json(loghandler.invalidKey)
+    if(apikeyInput != 'BukanMastah') return res.json(loghandler.invalidKey)
     if (!type) return res.json({status: false, creator, code: 404, message: 'masukan parameter type, type yang tersedia : base64 , base32'})
     if (type == 'base64' && encode){
         Base("b64enc", encode)
@@ -803,7 +803,7 @@ router.get('/kisahnabi', async (req, res, next) => {
     apikeyInput = req.query.apikey;
 
     if (!apikeyInput) return res.json(loghandler.notparam)
-    if (apikeyInput != 'zahirgans') return res.json(loghandler.invalidKey)
+    if(apikeyInput != 'BukanMastah') return res.json(loghandler.invalidKey)
     Searchnabi(nabi)
     .then(result => {
       res.json({
@@ -821,7 +821,7 @@ router.get('/infogempa', async (req, res, next) => {
           var apikeyInput = req.query.apikey
 
     if (!apikeyInput) return res.json(loghandler.notparam)
-    if (apikeyInput != 'zahirgans') return res.json(loghandler.invalidKey)
+    if(apikeyInput != 'BukanMastah') return res.json(loghandler.invalidKey)
     Gempa()
     .then(result => {
       res.json({
