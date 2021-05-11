@@ -1,53 +1,319 @@
-
 <!DOCTYPE html>
-<html lang="id">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="About Me" />
-    <meta name="author" content="Zhirrr" />
-    <meta content='#007FFF' name='theme-color'/>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://colorlib.com/polygon/concept/assets/vendor/bootstrap/css/bootstrap.min.css">
+    <link href="https://colorlib.com/polygon/concept/assets/vendor/fonts/circular-std/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://colorlib.com/polygon/concept/assets/libs/css/style.css">
+    <link rel="stylesheet" href="https://colorlib.com/polygon/concept/assets/vendor/fonts/fontawesome/css/fontawesome-all.css">
+    <link rel="stylesheet" href="https://colorlib.com/polygon/concept/assets/vendor/charts/chartist-bundle/chartist.css">
+    <link rel="stylesheet" href="https://colorlib.com/polygon/concept/assets/vendor/charts/morris-bundle/morris.css">
+    <link rel="stylesheet" href="https://colorlib.com/polygon/concept/assets/vendor/fonts/material-design-iconic-font/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="https://colorlib.com/polygon/concept/assets/vendor/charts/c3charts/c3.css">
+    <link rel="stylesheet" href="https://colorlib.com/polygon/concept/assets/vendor/fonts/flag-icon-css/flag-icon.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.all.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-    <base target="_blank"/>
-    <title>About Me - Zhirrr's API</title>
-    <style>
-      @import url('https://fonts.googleapis.com/css?family=Poppins');
-      *{
-        font-family: 'Poppins', sans-serif;
-      }
-    </style>
-  </head>
-  <body>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-primary bg-gradient shadow mb-3">
-    <div class="container">
-      <a class="navbar-brand fw-bold" href="/">Zhirrr's API</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="https://docs-api-zahirr.herokuapp.com/">API</a>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="author" content="FDL">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="keywords" content="HTML, CSS, JavaScript, PHP">
+  <meta name="google-site-verification" content="9cuqNY6wqMxc4rtkhNX3eLH1U5y5ZAXbLIXoIeccfY4" />
+  <meta property="og:image" content="https://b.top4top.io/p_1950z59w70.png">
+  <link rel="icon" type="image/png" href="https://b.top4top.io/p_1950z59w70.png"><link rel="shortcut icon">
+  <link rel="stylesheet" type="text" href="https://cdn.jsdelivr.net/sweetalert2/6.6.2/sweetalert2.min.css">
+  <link href="https://tools.antalyaboya.net/css/gxc7+.css" rel="stylesheet">
+  <link href="https://tools.antalyaboya.net/css/gxc7++.css" rel="stylesheet">
+  <link href="https://tools.antalyaboya.net/css/all.css" rel="stylesheet">
+  <link href="https://tools.antalyaboya.net/css/all.min.css" rel="stylesheet">
+  <meta content="Free Rest Api" property="og:title">
+  <meta name="description" content="FREE REST APIs">
+<title>FDL - API</title>
+</head>
+<body>
+  <div class="wrapper">
+    <nav id="sidebar" class="sidebar">
+      <div class="sidebar-content js-simplebar">
+        <a class="sidebar-brand" href="/"><span class="align-middle">FDL</span></a>
+        <ul class="sidebar-nav">
+          <div class="profile_info">
+            <img src="https://b.top4top.io/p_1950z59w70.png" class="profile_image" alt="FDL">
+            <h4>FDL</h4>
+          </div>
+          <li class="sidebar-header">Dashboard</li>
+          <li class="sidebar-item active">
+            <a class="sidebar-link" href="/"><i class="text-primary" data-feather="home"></i><span class="align-middle">Home</span></a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="https://docs-api-zahirr.herokuapp.com/about.html">About</a>
+          <li class="sidebar-item">
+            <a class="sidebar-link" href="https://api.whatsapp.com/send/?phone=628990542731&text=Assalamualaikum+Kak+apikeynya+apa+ya+kak&app_absent=0"><i class="fab fa-lg fa-whatsapp" style="margin-left: 1px;"></i><font>APIKEY</font></a>
           </li>
-        </ul>
+          <li class="sidebar-header">Documentation</li>
+          <li class="sidebar-item">
+            <a data-target="#download" data-toggle="collapse" class="sidebar-link collapsed"><i class="align-middle" data-feather="download"></i><span class="align-middle">DOWNLOADER</span></a>
+            <ul id="download" class="sidebar-dropdown list-unstyled collapse" data-parent="#sidebar">
+              <li class="sidebar-item"><a class="sidebar-link" href="api/fbdown/?url=MASUKIN_URL&apikey=MASUKIN_APIKEY">FB DOWNLOADER</a></li>
+              <li class="sidebar-item"><a class="sidebar-link" href="api/tiktod/?url=MASUKIN_URL&apikey=MASUKIN_APIKEY">TIK TOK DOWNLOADER</a></li>
+ </ul>
+          </li>
+          <li class="sidebar-item">
+            <a data-target="#stalkz" data-toggle="collapse" class="sidebar-link collapsed"><i class="align-middle" data-feather="star"></i><span class="align-middle">STALKING</span></a>
+            <ul id="stalkz" class="sidebar-dropdown list-unstyled collapse" data-parent="#sidebar">
+              <li class="sidebar-item"><a class="sidebar-link" href="api/tiktod/stalk/?username=MASUKIN_USERNAME&apikey=MASUKIN_APIKEY">STALK TIK TOK</a></li>
+            </ul>
+          </li>
+          <li class="sidebar-item">
+            <a data-target="#islam" data-toggle="collapse" class="sidebar-link collapsed"><i class="align-middle" data-feather="moon"></i><span class="align-middle">ISLAMIC</span></a>
+            <ul id="islam" class="sidebar-dropdown list-unstyled collapse" data-parent="#sidebar">
+              <li class="sidebar-item"><a class="sidebar-link" href="api/quran?surah=3&ayat=2&apikey=MASUKAN_APIKEY">AL QUR'AN</a></li>
+              <li class="sidebar-item"><a class="sidebar-link" href="api/hadits?kitab=bukhari&nomor=52&apikey=MASUKAN_APIKEY">HADIS SAHIH</a></li>
+              <li class="sidebar-item"><a class="sidebar-link" href="api/muslim/tahlil?apikey=MASUKAN_APIKEY">DOA TAHLIL</a></li>
+              <li class="sidebar-item"><a class="sidebar-link" href="api/muslim/doaharian?apikey=MASUKAN_APIKEY">DOA HARIAN</a></li>
+              <li class="sidebar-item"><a class="sidebar-link" href="api/muslim/wirid?apikey=MASUKAN_APIKEY">DOA WIRID</a></li>
+              <li class="sidebar-item"><a class="sidebar-link" href="api/muslim/asmaulhusna?apikey=MASUKAN_APIKEY">ASMAUL HUSNA</a></li>
+              <li class="sidebar-item"><a class="sidebar-link" href="api/muslim/ayatkursi?apikey=MASUKAN_APIKEY">AYAT KURSI</a></li>
+              <li class="sidebar-item"><a class="sidebar-link" href="api/kisahnabi?nabi=muhammad&apikey=MASUKAN_APIKEY">KISAH NABI</a></li>
+              <li class="sidebar-item"><a class="sidebar-link" href="api/muslim/niatshalat?apikey=MASUKAN_APIKEY">NIAT SHALAT</a></li>
+              <li class="sidebar-item"><a class="sidebar-link" href="api/muslim/bacaanshalat?apikey=MASUKAN_APIKEY">BACAAN SHOLAT</a></li>
+              <li class="sidebar-item"><a class="sidebar-link" href="api/jadwalshalat?kota=jakartautara&apikey=MASUKAN_APIKEY">JADWAL SHOLAT</a></li>
+            </ul>
+          </li>
+          <li class="sidebar-item">
+            <a data-target="#wpi" data-toggle="collapse" class="sidebar-link collapsed"><i class="align-middle" data-feather="image"></i><span class="align-middle">WALPAPPER API</span></a>
+            <ul id="wpi" class="sidebar-dropdown list-unstyled collapse" data-parent="#sidebar">
+              <li class="sidebar-item"><a class="sidebar-link" href="api/wallpaper/teknologi?apikey=MASUKAN_APIKEYp">WALPAPPER TEKNOLOGI</a></li>
+              <li class="sidebar-item"><a class="sidebar-link" href="api/wallpaper/programming?apikey=MASUKAN_APIKEY">WALPAPPER PROGRAMING</a></li>
+              <li class="sidebar-item"><a class="sidebar-link" href="api/wallpaper/cyberspace?apikey=MASUKAN_APIKEY">WALPAPPER CYBER</a></li>
+              <li class="sidebar-item"><a class="sidebar-link" href="api/wallpaper/muslim?apikey=MASUKAN_APIKEY">WALPAPPER MUSLIM</a></li>
+              <li class="sidebar-item"><a class="sidebar-link" href="api/wallpaper/pegunungan?apikey=MASUKAN_APIKEY">WALPAPPER MONTAIN</a></li>
+            </ul>
+          </li>
+          <li class="sidebar-item">
+            <a data-target="#randomapikey" data-toggle="collapse" class="sidebar-link collapsed"><i class="align-middle" data-feather="repeat"></i><span class="align-middle">RANDOM API</span></a>
+            <ul id="randomapikey" class="sidebar-dropdown list-unstyled collapse" data-parent="#sidebar">
+              <li class="sidebar-item"><a class="sidebar-link" href="api/randomquote?apikey=MASUKIN_APIKEY">RANDOM QUOTES</a></li>
+              <li class="sidebar-item"><a class="sidebar-link" href="api/randomquote/muslim?apikey=MASUKIN_APIKEY">QUOTES ISLAM</a></li>
+              <li class="sidebar-item"><a class="sidebar-link" href="api/random/asmaulhusna?apikey=MASUKIN_APIKEY">RANDOM ASMAUL HUSNA</a></li>
+              <li class="sidebar-item"><a class="sidebar-link" href="api/random/meme?apikey=MASUKIN_APIKEY">RANDOM MEME</a></li>
+              <li class="sidebar-item"><a class="sidebar-link" href="api/random/wallpaper?apikey=MASUKIN_APIKEY">RANDOM WALPAPPER</a></li>
+            </ul>
+          </li>
+          <li class="sidebar-item">
+            <a data-target="#makernih" data-toggle="collapse" class="sidebar-link collapsed"><i class="align-middle" data-feather="image"></i><span class="align-middle">MAKER API</span></a>
+            <ul id="makernih" class="sidebar-dropdown list-unstyled collapse" data-parent="#sidebar">
+              <li class="sidebar-item"><a class="sidebar-link" href="api/textmaker?text=FDL&text2=GANZ&theme=glitch&apikey=MASUKIN_APIKEY">GLITCH TEXT</a></li>
+              <li class="sidebar-item"><a class="sidebar-link" href="api/textmaker?text=halo&text2=hai&text3=gwganteng&theme=google-suggestion&apikey=MASUKIN_APIKEY">GOOGLE SUGGESTION</a></li>
+              <li class="sidebar-item"><a class="sidebar-link" href="api/textmaker/game?text=halo&text2=hai&theme=pubg&apikey=MASUKIN_APIKEY">PUBG TEXT</a></li>
+              <li class="sidebar-item"><a class="sidebar-link" href="api/textmaker/game?text=halo&text2=hai&theme=battlefield&apikey=MASUKIN_APIKEY">BATLE FIELD</a></li>
+              <li class="sidebar-item"><a class="sidebar-link" href="api/textmaker/senja?text=FDL&theme=coffee-cup&apikey=MASUKIN_APIKEY">COFFEE CUP 1</a></li>
+              <li class="sidebar-item"><a class="sidebar-link" href="api/textmaker/senja?text=FDL&theme=coffee-cup2&apikey=MASUKIN_APIKEY">COFFEE CUP 2</a></li>
+              <li class="sidebar-item"><a class="sidebar-link" href="api/textmaker/metallic?text=FDL&theme=neon&apikey=MASUKIN_APIKEY">NEON TEXT</a></li>
+              <li class="sidebar-item"><a class="sidebar-link" href="api/textmaker/metallic?text=FDL&theme=glow&apikey=MASUKIN_APIKEY">GLOW TEXT</a></li>
+              <li class="sidebar-item"><a class="sidebar-link" href="api/textmaker/alam?text=FDL&theme=summer&apikey=MASUKIN_APIKEY">SUMMER</a></li>
+              <li class="sidebar-item"><a class="sidebar-link" href="api/textmaker/alam?text=FDL&theme=flower&apikey=MASUKIN_APIKEY">FLOWER</a></li>
+            </ul>
+          </li>
+          <li class="sidebar-item">
+            <a data-target="#wibunime" data-toggle="collapse" class="sidebar-link collapsed"><i class="align-middle" data-feather="heart"></i><span class="align-middle">ANIME API</span></a>
+            <ul id="wibunime" class="sidebar-dropdown list-unstyled collapse" data-parent="#sidebar">
+              <li class="sidebar-item"><a class="sidebar-link" href="api/anime/kusonime?search=planetarian&apikey=MASUKAN_APIKEY">KUSONIME</a></li>
+              <li class="sidebar-item"><a class="sidebar-link" href="api/manga?search=kimetsu no yaiba&apikey=MASUKAN_APIKEY">MANGA</a></li>
+            </ul>
+          </li>
+          <li class="sidebar-item">
+            <a data-target="#gameapi" data-toggle="collapse" class="sidebar-link collapsed"><i class="align-middle" data-feather="monitor"></i><span class="align-middle">GAME API</span></a>
+            <ul id="gameapi" class="sidebar-dropdown list-unstyled collapse" data-parent="#sidebar">
+<li class="sidebar-item"><a class="sidebar-link" href="/api/kuis/caklontong?apikey=MASUKAN_APIKEY">CAKLONTONG</a></li>
+              <li class="sidebar-item"><a class="sidebar-link" href="/api/kuis/tebakgambar?apikey=MASUKAN_APIKEY">TEBAK GAMBAR</a></li>
+            </ul>
+          </li>
+          <li class="sidebar-item">
+            <a data-target="#other" data-toggle="collapse" class="sidebar-link collapsed"><i class="align-middle" data-feather="chrome"></i><span class="align-middle">OTHER API</span></a>
+            <ul id="other" class="sidebar-dropdown list-unstyled collapse" data-parent="#sidebar">
+              <li class="sidebar-item"><a class="sidebar-link" href="api/nulis?text=fdl&apikey=MASUKAN_APIKEY">NULIS</a></li>
+              <li class="sidebar-item"><a class="sidebar-link" href="api/infonpm?query=QUERY&hostname=NAME&apikey=MASUKAN_APIKEY">INFO NPM</a></li>
+              <li class="sidebar-item"><a class="sidebar-link" href="api/infogempa?apikey=MASUKAN_APIKEY">INFO GEMPA</a></li>
+              <li class="sidebar-item"><a class="sidebar-link" href="api/cuaca?kabupaten=purbalingga&apikey=MASUKAN_APIKEY">INFO CUACA</a></li>
+              <li class="sidebar-item"><a class="sidebar-link" href="api/covidindo?apikey=MASUKAN_APIKEY">COVID INDO</a></li>
+              <li class="sidebar-item"><a class="sidebar-link" href="api/covidworld?apikey=MASUKAN_APIKEY">COVID WORLD</a></li>
+              <li class="sidebar-item"><a class="sidebar-link" href="api/short/tiny?url=youtube.com&apikey=MASUKAN_APIKEY">SHORT URL</a></li>
+              <li class="sidebar-item"><a class="sidebar-link" href="api/wikipedia?search=jembatan&apikey=MASUKAN_APIKEY">WIKIPEDIA</a></li>
+              <li class="sidebar-item"><a class="sidebar-link" href="api/drakorasia?search=tale&apikey=MASUKAN_APIKEY">DRAKOR ASIA</a></li>
+              <li class="sidebar-item"><a class="sidebar-link" href="api/fakedata?country=en&apikey=MASUKAN_APIKEY">FAKE DATA</a></li>
+              <li class="sidebar-item"><a class="sidebar-link" href="api/hilih?kata=aku kan ganteng banget&apikey=MASUKAN_APIKEY">HILIH TEXT</a></li>
+              <li class="sidebar-item"><a class="sidebar-link" href="api/liriklagu?lagu=melukis senja&apikey=MASUKAN_APIKEY">LIRIK LAGU</a></li>
+              <li class="sidebar-item"><a class="sidebar-link" href="api/chordlagu?lagu=melukis senja&apikey=MASUKAN_APIKEY">CHORD LAGU</a></li>
+              <li class="sidebar-item"><a class="sidebar-link" href="api/kbbi?kata=pohon&apikey=MASUKAN_APIKEY">KBBI</a></li>
+              <li class="sidebar-item"><a class="sidebar-link" href="api/kodepos?kota=jakarta&apikey=MASUKAN_APIKEY">KODE POS</a></li>
+              <li class="sidebar-item"><a class="sidebar-link" href="api/translate?kata=hi&apikey=MASUKAN_APIKEY">TRANSLATE</a></li>
+            </ul>
+          </li>
+                    <li class="sidebar-header">SOSIAL MEDIA</li>
+          <li class="sidebar-item">
+            <a class="sidebar-link" href="https://yotube.com/FDLGANZ"><i class="fab fa-lg fa-youtube" style="margin-left: 1px;"></i><font>YouTube</font>
+</a>
+          </li>
+          <li class="sidebar-item">
+            <a class="sidebar-link" href="https://api.whatsapp.com/send/?phone=628990542731&text=Assalamualaikum+Kak+apikeynya+apa+ya+kak&app_absent=0"><i class="fab fa-lg fa-whatsapp" style="margin-left: 1px;"></i><font>Whatsapp</font></a>
+            </a>
+          </li>
+          <li class="sidebar-item">
+            <a class="sidebar-link" href="https://github.com/FDLBOT"><i class="fab fa-lg fa-github" style="margin-left: 1px;"></i><font>GitHub</font></a>
+          </li>
+          <li class="sidebar-item">
+            <a class="sidebar-link" href="https://instagram.com/fdl_ganz"><i class="fab fa-lg fa-instagram" style="margin-left: 1px;"></i><font>Instagram</font></a>
+          <li class="sidebar-item">
+            <a class="sidebar-link" href="https://fdlganz.blogspot.com"><i class="align-middle" data-feather="coffee"></i><span class="align-middle">Blogger</span></a>
+        <br><br><br>
       </div>
-    </div>
-  </nav>
-  <div class="container-fluid">
-    <div class="card m-3 text-center shadow">
-      <h2 class="card-header shadow-sm bg-primary text-white">About Me</h2>
-      <div class="card-body">
-      <div class="text-center">
-        <img src="https://avatars.githubusercontent.com/u/75620279" class="rounded-circle shadow mb-3" alt="Zhirrr" width="150px" height="150px">
-      </div>
-        <p class="card-text text-shadow">Web API Ini dibuat oleh saya sepenuhnya oleh saya juga beberapa bantuan teman saya.<br/>Umur saya baru 14 tahun dan masih menjadi seorang pelajar di SMPN 279 Jakarta Utara<br/>Senang dari kecil tentang programming<br/>Belajar programming Otodidak, mulai dari YouTube dan web2 lainnya<br/>
-        Dengan nama asli saya <b>Zahir Hadi Athallah</b><br/>Bahasa pemrograman yang saya ketahui hanya sedikit, yaitu (HTML/CSS/JavaScript), Python, Java, dan C#<b/><br/>Rest API ini juga dalam tahap pengembangan, jadi mohon doa dan dukungannya. semoga bisa bermanfaat untuk banyak orang<br/>Terimakasih.</p>
-      </div>
+    </nav>
+         
+    
+    <div class="main">
+      <nav class="navbar navbar-expand navbar-light navbar-bg">
+        <a class="sidebar-toggle d-flex"><i class="hamburger align-self-center"></i></a>
+        <div class="navbar-collapse collapse">
+          <ul class="navbar-nav navbar-align">
+            <li class="nav-item dropdown">
+              <a class="nav-icon dropdown-toggle" href="#" id="alertsDropdown" data-toggle="dropdown">
+                <div class="position-relative">
+                  <i class="align-middle" data-feather="bell"></i>
+                  <span class="indicator">3</span>
+                </div>
+              </a>
+              <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right py-0" aria-labelledby="alertsDropdown">
+                <div class="dropdown-menu-header">3 New Notifications</div>
+                <div class="list-group">
+                  <a href="#" class="list-group-item">
+                    <div class="row g-0 align-items-center">
+                      <div class="col-2">
+                        <i class="text-danger" data-feather="star"></i>
+                      </div>
+                      <div class="col-10">
+                        <div class="text-dark">WEBSITE FINISH</div>
+                        <div class="text-muted small mt-1">Latest Website</div>
+                      </div>
+                    </div>
+                  </a>
+                  <a href="#" class="list-group-item">
+                    <div class="row g-0 align-items-center">
+                      <div class="col-2">
+                        <i class="align-middle" data-feather="moon"></i>
+                      </div>
+                      <div class="col-10">
+                        <div class="text-dark">Update API</div>
+                        <div class="text-muted small mt-1">Update Fitur Info Gempa</div>
+                      </div>
+                    </div>
+                  </a>
+                  <a href="#" class="list-group-item">
+                    <div class="row g-0 align-items-center">
+                      <div class="col-2">
+                        <i class="align-middle" data-feather="code"></i>
+                      </div>
+                      <div class="col-10">
+                        <div class="text-dark">Update Template</div>
+                        <div class="text-muted small mt-1">Update Template Website</div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="dropdown-menu-footer">
+                  <a href="#" class="text-muted">Show All Notifications</a>
+                </div>
+              </div>
+            </li>
+           
+  
+            </li>
+            <li class="nav-item dropdown">
+              <a id="openfull" href="javascript:;" class="nav-icon dropdown-toggle"><i class="align-middle" data-feather="maximize" id="openfull" onclick="openFullscreen();"></i></a>
+            </li>
+            <li class="nav-item dropdown">
+              <a id="openfull" href="javascript:;" class="nav-icon dropdown-toggle"><i class="align-middle" data-feather="minimize" id="closefull" onclick="closeFullscreen();"></i></a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+    <iframe src="https://h.top4top.io/m_1954fjhuz1.mp3" allow="autoplay" loop="true" allowfullscreen="0" frameborder="0" width="0" height="0"></iframe>
+    <main class="content">
+            <div class="container-fluid p-0">
+                <div class="row">
+
+                    <div class="col-xl-12 col-lg-6 col-12">
+                        <div class="card">
+                            <div class="card-content">
+                                <div class="px-3 py-3">
+                                    <h3 class="card-title" style="text-align: center;"><b>S&K</b></h3>
+                                    <div class="table-responsive">
+                                        <table class="table">
+                                            <thead>
+                                                <tr>
+                                                    <td>1. Dilarang Mencopas Atau Menirukan Template Website</td>
+                                                </tr>
+                                                <td>2. Jika Ada Api Yg Eror Segera Hubungi Developer</td>
+                                            </tr>
+                                            <td>3. Mohon Jangan Spam Api
+                                            </tr>
+                                            <td>4. Harap Gunakan Api Dengan Bijak
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <div class="card">
+                            <div class="card-header">
+                                <h3 class="card-title"><b>WHAT WEB IS THIS?</b></h3><br>
+                                <p>On My DOCS Api Website. I Provide This Fire For Free To Make It Easier To Make The Whatsapp Bot Feature Hopefully It Can Be Useful For Many People
+Thank you</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <div class="card">
+                            <div class="card-header">
+                                <h3 class="card-title"><b>THE RULES!</b></h3><br>
+                                <p>Gunakan Website Api Ini Dengan Baik Dan Benar!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+      <footer class="footer">
+        <div class="container-fluid">
+          <div class="row text-muted">
+            <div class="col-6 text-left">
+              <p class="mb-0">
+                <a href="https:\\instagram.com/fdl_ganz" class="text-muted"><strong>Copyright &copy; 2021 FDL GANZ</strong></a>
+              </p>
+            </div>
+            <div class="col-6 text-right">
+              <p class="mb-0">
+                <a href="https:\\instagram.com/fdl_ganz" class="text-muted"><strong>Made By &hearts; FDL GANZ</strong></a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
     </div>
   </div>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
-  </body>
+</body>
+<script src="https://tools.antalyaboya.net/js/app.js"></script>
+<script src="https://tools.antalyaboya.net/js/all.min.js"></script>
+<script src="https://cdn.jsdelivr.net/sweetalert2/6.6.2/sweetalert2.min.js"></script>
+<script> function MainTance(){ swal({ title:"- Maintenance -", type:"error", background:"#ffffff", confirmButtonColor:"#242323" }) } </script>
+<script> var elem = document.documentElement; function openFullscreen() { if (elem.requestFullscreen) { elem.requestFullscreen(); } else if (elem.mozRequestFullScreen) { /* Firefox */ elem.mozRequestFullScreen(); } else if (elem.webkitRequestFullscreen) { /* Chrome, Safari & Opera */ elem.webkitRequestFullscreen(); } else if (elem.msRequestFullscreen) { /* IE/Edge */ elem.msRequestFullscreen(); } } function closeFullscreen() { if (document.exitFullscreen) { document.exitFullscreen(); } else if (document.mozCancelFullScreen) { document.mozCancelFullScreen(); } else if (document.webkitExitFullscreen) { document.webkitExitFullscreen(); } else if (document.msExitFullscreen) { document.msExitFullscreen(); } } </script>
 </html>
