@@ -153,7 +153,7 @@ var len = 15
             randomlagi += arr[Math.floor(Math.random() * arr.length)];
         }
 
-        var randomTextNumber = random+randomlagi+'FDL'+'FDL';
+        var randomTextNumber = random+randomlagi+'---------FDL'+'FDL--GANZ';
         
  
  async function cekApiKey(api) {
